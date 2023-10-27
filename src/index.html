@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="absolute z-10 w-full top-0 right-0">
+      <div class="relative bg-[#091242] py-8 w-full px-2">
+        <div class="flex items-center justify-between container mx-auto">
+          <h1 class="text-white font-Staatliches w-full text-2xl lg:text-5xl">
+            COMMIT EVENTS
+          </h1>
+
+          <div
+            class="container mx-auto sm:space-x-10 w-full flex sm:flex-row md:space-y-0 items-center md:justify-end">
+            <div class="flex items-center space-x-4">
+              <span
+                class="bg-blue-900 border border-blue-800 flex items-center rounded-full justify-between">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-8 fill-[#F6B426] h-8 p-2 md:w-16 md:h-16 md:p-5"
+                  height="1em"
+                  viewBox="0 0 448 512">
+                  <path
+                    d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z" />
+                </svg>
+              </span>
+              <div class="text-white text-sm font-medium font-sans">
+                <p>March 7-8, 2024</p>
+                <p>Marrakech</p>
+              </div>
+            </div>
+            <div class="sm:flex hidden items-center space-x-4">
+              <span
+                class="bg-blue-900 border border-blue-800 flex items-center rounded-full justify-between">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  class="w-8 fill-[#F6B426] h-8 p-2 md:w-16 md:h-16 md:p-5"
+                  viewBox="0 0 512 512">
+                  <path
+                    d="M215.4 96H144 107.8 96v8.8V144v40.4 89L.2 202.5c1.6-18.1 10.9-34.9 25.7-45.8L48 140.3V96c0-26.5 21.5-48 48-48h76.6l49.9-36.9C232.2 3.9 243.9 0 256 0s23.8 3.9 33.5 11L339.4 48H416c26.5 0 48 21.5 48 48v44.3l22.1 16.4c14.8 10.9 24.1 27.7 25.7 45.8L416 273.4v-89V144 104.8 96H404.2 368 296.6 215.4zM0 448V242.1L217.6 403.3c11.1 8.2 24.6 12.7 38.4 12.7s27.3-4.4 38.4-12.7L512 242.1V448v0c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64v0zM176 160H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
+                </svg>
+              </span>
+              <div class="text-white text-sm font-medium font-sans">
+                <p>Email</p>
+                <p>info@commitevents.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="relative bg-[#09124240] px-8 xl:px-2 py-4">
+        <div class="container mx-auto flex items-center justify-between">
+          <div class="flex justify-end w-full">
+            <button
+              id="menuButton"
+              class="text-gray-100 hover:text-white inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
+              <svg
+                class="block h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                id="openIcon">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+              <svg
+                class="hidden h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                id="closeIcon">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="menuItems" class="hidden">
+          <div
+            class="bg-[#111C55] container mx-auto border-[#273270] rounded-md border overflow-hidden">
+            <ul class="text-xl text-white">
+              <li
+                class="xl:border-r xl:border-r-[#FFFFFF33] py-4 px-8 hover:bg-[#f6b4263a] hover:text-[#F6B426]">
+                <a
+                  href="#"
+                  class="font-semibold leading-[135%] relative inline-block">
+                  <span class="relative z-10">Home</span>
+                </a>
+              </li>
+              <li
+                class="xl:border-r xl:border-r-[#FFFFFF33] py-4 px-8 hover:bg-[#f6b4263a] hover:text-[#F6B426]">
+                <a
+                  href="#about-us"
+                  class="font-semibold leading-[135%] relative inline-block">
+                  <span class="relative z-10">About Us</span>
+                </a>
+              </li>
+              <li
+                class="xl:border-r xl:border-r-[#FFFFFF33] py-4 px-8 hover:bg-[#f6b4263a] hover:text-[#F6B426]">
+                <a
+                  href="#sponsors"
+                  class="font-semibold leading-[135%] relative inline-block">
+                  <span class="relative z-10">Retailers & Sponsors</span>
+                </a>
+              </li>
+              <li
+                class="xl:border-r xl:border-r-[#FFFFFF33] py-4 px-8 hover:bg-[#f6b4263a] hover:text-[#F6B426]">
+                <a
+                  href="#keys"
+                  class="font-semibold leading-[135%] relative inline-block">
+                  <span class="relative z-10">Key Numbers</span>
+                </a>
+              </li>
+              <li
+                class="xl:border-r xl:border-r-[#FFFFFF33] py-4 px-8 hover:bg-[#f6b4263a] hover:text-[#F6B426]">
+                <a
+                  href="#agenda"
+                  class="font-semibold leading-[135%] relative inline-block">
+                  <span class="relative z-10">Agenda</span>
+                </a>
+              </li>
+              <li
+                class="xl:border-r xl:border-r-[#FFFFFF33] py-4 px-8 hover:bg-[#f6b4263a] hover:text-[#F6B426]">
+                <a
+                  href="#pricing"
+                  class="font-semibold leading-[135%] relative inline-block">
+                  <span class="relative z-10">Pricing</span>
+                </a>
+              </li>
+              <li
+                class="xl:border-r xl:border-r-[#FFFFFF33] py-4 px-8 hover:bg-[#f6b4263a] hover:text-[#F6B426]">
+                <a
+                  href="#contact"
+                  class="font-semibold leading-[135%] relative inline-block">
+                  <span class="relative z-10">Contact Us</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section
+      id="about-us"
+      class="relative bg-center h-screen flex items-end pb-20"
+      style="
+        background-image: url('assets/h2.png');
+        background-size: cover;
+        background-position: center;
+      ">
+      <div class="container w-full px-2 relative text-white mx-auto">
+        <div class="max-w-3xl z-10">
+          <div class="bg-blue-900 text-sm py-1 inline-block relative mb-3">
+            <p class="px-3 font-sans">
+              Join us on March 7-8, 2024 in Marrakech
+            </p>
+            <span
+              class="absolute h-full w-1 bg-gradient-to-r from-yellow-400 to-yellow-600 via-yellow-300 top-0 left-0"></span>
+          </div>
+
+          <h1
+            class="text-2xl md:leading-[120%] font-sans md:text-6xl font-bold">
+            Welcome to the Future of Retail and Logistics
+          </h1>
+
+          <div class="py-9">
+            <p class="text-lg font-sans font-medium mb-2">
+              Bringing together Retailers and Logistic Companies
+            </p>
+            <p class="text-lg font-sans font-medium mb-2">
+              Explore New Business Opportunities
+            </p>
+          </div>
+
+          <div class="flex items-center gap-8 flex-wrap">
+            <a
+              class="flex justify-center font-sans font-bold relative overflow-hidden items-center px-9 py-5 bg-gradient-to-r from-[#FFB629] to-[#FFDA56] text-gray-700"
+              href="#contact">
+              Register Now
+              <span class="ml-1">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="about-us"
+      class="max-w-7xl mx-auto px-2 py-24 grid md:grid-cols-2 gap-12">
+      <div>
+        <div class="py-1 relative bg-gray-200 bg-opacity-60 w-fit mb-3">
+          <h2 class="text-gray-700 text-sm px-3 font-sans">About Us</h2>
+          <span
+            class="absolute h-full w-1 bg-gradient-to-r from-[#FFB629] to-[#FFDA56] via-yellow-300 top-0 left-0"></span>
+        </div>
+        <h1
+          class="sm:text-3xl text-xl sm:leading-[120%] text-[#1C1F35] font-sans font-semibold mb-4">
+          A global event, expecting 200 retailers & 60 + Supply chain solution
+          providers from more than 35 countries
+        </h1>
+        <ul class="space-y-2">
+          <li>
+            <div class="flex gap-2 items-center">
+              <span
+                class="flex items-center justify-center bg-gradient-to-r rounded-full">
+                <svg
+                  class="text-green-500 w-6 h-6 p-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <p class="text-gray-600 font-sans font-medium leading-7">
+                All the latest innovations in Supply Chain
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="flex gap-2 items-center">
+              <span
+                class="flex items-center justify-center bg-gradient-to-r rounded-full">
+                <svg
+                  class="text-green-500 w-6 h-6 p-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <p class="text-gray-600 font-sans font-medium leading-7">
+                Round of tables with 10 pre-selected delegates
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="flex gap-2 items-center">
+              <span
+                class="flex items-center justify-center bg-gradient-to-r rounded-full">
+                <svg
+                  class="text-green-500 w-6 h-6 p-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <p class="text-gray-600 font-sans font-medium leading-7">
+                1on1 unlimited meetings
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="flex gap-2 items-center">
+              <span
+                class="flex items-center justify-center bg-gradient-to-r rounded-full">
+                <svg
+                  class="text-green-500 w-6 h-6 p-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <p class="text-gray-600 font-sans font-medium leading-7">
+                Networking party
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="flex gap-2 items-center">
+              <span
+                class="flex items-center justify-center bg-gradient-to-r rounded-full">
+                <svg
+                  class="text-green-500 w-6 h-6 p-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <p class="text-gray-600 font-sans font-medium leading-7">
+                28 content sessions
+              </p>
+            </div>
+          </li>
+          <!-- Add more list items here -->
+        </ul>
+
+        <div class="space-y-2 mt-6">
+          <div class="flex items-center space-x-4">
+            <span
+              class="flex items-center justify-center bg-gradient-to-r from-[#FFB629] to-[#FFDA56] rounded-full">
+              <svg
+                class="text-yellow-600 w-12 h-12 p-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+              </svg>
+            </span>
+            <h4 class="text-2xl text-gray-700 font-sans">
+              Global Business Connections
+            </h4>
+          </div>
+          <div class="flex items-center space-x-4">
+            <span
+              class="flex items-center justify-center bg-gradient-to-r from-[#FFB629] to-[#FFDA56] rounded-full">
+              <svg
+                class="text-yellow-600 w-12 h-12 p-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 3v-4m0 0l3 3m-3-3l-3 3"></path>
+              </svg>
+            </span>
+            <h4 class="text-2xl text-gray-700 font-sans">
+              Market Growth Strategies
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <img
+          src="assets/about3.jpg"
+          alt="global-event"
+          class="w-full polygon-image" />
+      </div>
+    </section>
+
+    <section id="sponsors" class="bg-[#E9E9E9] py-24">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 px-2 gap-4 lg:gap-5">
+        <div class="bg-white py-12 px-7 w-full sm:px-14">
+          <div class="py-1 relative bg-[#e8e8e873] w-fit mb-5">
+            <h3 class="text-[#1C1F35] text-sm px-3 font-Rubik">Join Us</h3>
+            <span
+              class="absolute h-full w-1 bg-gradient-to-r from-[#FFB629] to-[#FFDA56] via-[#FFD7A6] top-0 lef-0"></span>
+          </div>
+          <div class="flex items-center space-x-5 mb-7">
+            <span
+              class="flex items-center justify-center rounded-full bg-white border border-[#091242] w-fit">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-[#091242] w-[63px] h-[63px] p-5"
+                height="1em"
+                viewBox="0 0 512 512">
+                <path
+                  d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+              </svg>
+            </span>
+            <h2
+              class="text-[#091242] font-Rubik text-xl sm:text-[28px] font-medium capitalize">
+              I AM A RETAILER
+            </h2>
+          </div>
+          <ul
+            class="list-disc space-y-2 text-[#091242] font-Krub mb-7 font-medium">
+            <li>
+              Targeted one-to-one meetings, pre-filled agenda – quickly find
+              your supply chain solutions
+            </li>
+            <li>
+              Carefully curated selection of vendors – from established titans
+              to exciting newcomers
+            </li>
+            <li>Fully hosted buyer programme – everything taken care of</li>
+          </ul>
+          <a
+            href="#contact"
+            class="text-white bg-[#091242] font-semibold leading-[135%] px-[51px] py-5 font-Krub">
+            Register Now
+          </a>
+        </div>
+
+        <div class="bg-[#091242] py-12 px-7 w-full sm:px-14">
+          <div class="py-1 relative bg-[#111C55] w-fit mb-5">
+            <h3 class="text-white text-sm px-3 font-Rubik">Join Us</h3>
+            <span
+              class="absolute h-full w-1 bg-gradient-to-r from-[#FFB629] to-[#FFDA56] via-[#FFD7A6] top-0 lef-0"></span>
+          </div>
+          <div class="flex items-center space-x-5 mb-7">
+            <span
+              class="flex items-center justify-center rounded-full bg-[#111C55] border border-[#2D3A7B] w-fit">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-white w-[63px] h-[63px] p-5"
+                height="1em"
+                viewBox="0 0 512 512">
+                <path
+                  d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+              </svg>
+            </span>
+            <h2
+              class="text-white font-Rubik text-xl sm:text-[28px] font-medium capitalize">
+              I AM A SPONSOR
+            </h2>
+          </div>
+          <ul class="list-disc space-y-2 text-white font-Krub mb-7 font-medium">
+            <li>
+              unlimited 1to1 meetings – sector-wide retail, e-commerce and brand
+              giants
+            </li>
+
+            <li>
+              Peerless service, all-inclusive package – pre-fitted stand ready
+              to go
+            </li>
+          </ul>
+          <a
+            href="#contact"
+            class="text-#23212A bg-gradient-to-r from-[#FFB629] to-[#FFDA56] font-semibold leading-[135%] px-[51px] py-5 font-Krub">
+            Register Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 container mx-auto">
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-12 px-2">
+        <div>
+          <img src="assets/marrakech.jpg" alt="marakech" class="" />
+        </div>
+        <div>
+          <div class="py-1 relative bg-[#e8e8e873] w-fit mb-3">
+            <h2 class="text-[#1C1F35] text-sm px-3 font-Rubik">We are Green</h2>
+            <span
+              class="absolute h-full w-1 bg-gradient-to-r from-[#FFB629] to-[#FFDA56] via-[#FFD7A6] top-0 lef-0"></span>
+          </div>
+          <h1
+            class="text-4xl leading-[120%] text-[#1C1F35] font-Rubik font-semibold mb-4">
+            Our Mission and Responsibility: Embracing a Greener Future
+          </h1>
+          <p
+            class="text-[#666C89] text-md font-Krub font-medium leading-[151%]">
+            At commit Events we care about customers, we care to have your trust
+            and we care for the future. That is why all the material used during
+            the event will be 100% recycled. Our recharge station will work on
+            solar energy and you&apos;ll be able to see the amazing solar
+            pannels right outside the venue
+          </p>
+          <div class="m-auto w-fit mt-5">
+            <img src="assets/svg/world.svg" alt="world" class="w-40" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="keys"
+      class="relative bg-center flex items-end py-12 px-2"
+      style="
+        background-image: url('assets/keys.png');
+        background-size: cover;
+        background-position: center;
+      ">
+      <div
+        class="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-800/60"></div>
+      <div class="container mx-auto z-10">
+        <div class="text-center">
+          <h1 class="text-white font-Rubik text-4xl mb-12 font-semibold">
+            Key Numbers
+          </h1>
+          <div
+            class="flex flex-wrap items-center gap-12 lg:gap-40 justify-center">
+            <div
+              class="rounded-full text-white w-72 h-72 flex items-center justify-center flex-col bg-[#23212A]">
+              <img
+                src="assets/svg/men.svg"
+                alt="exhibitors"
+                class="w-32 h-32" />
+              <h3 class="text-4xl font-Rubik font-bold">60+</h3>
+              <h4 class="text-lg uppercase font-Rubik font-bold">Exhibitors</h4>
+            </div>
+
+            <div
+              class="rounded-full text-white w-72 h-72 flex items-center justify-center flex-col bg-gradient-to-r from-[#FFB629] to-[#FFDA56]">
+              <img
+                src="assets/svg/bags.svg"
+                alt="retailers"
+                class="w-32 h-32" />
+              <h3 class="text-4xl font-Rubik font-bold">200+</h3>
+              <h4 class="text-lg uppercase font-Rubik font-bold">Retailers</h4>
+            </div>
+
+            <div
+              class="rounded-full text-white w-72 h-72 flex items-center justify-center flex-col bg-[#091242]">
+              <image
+                src="assets/svg/interview.svg"
+                alt="content-sessions"
+                class="w-32 h-32" />
+              <h3 class="text-4xl font-Rubik font-bold">28</h3>
+              <h4 class="text-lg font-Rubik uppercase font-semibold">
+                Content Sessions
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="agenda" class="pt-20 pb-16 bg-[#F4F4F4] text-center">
+      <div>
+        <div class="py-1 relative bg-[#e8e8e873] text-start mx-auto w-fit mb-3">
+          <h2 class="text-[#1C1F35] text-sm px-3 font-Rubik">Agenda</h2>
+          <span
+            class="absolute h-full w-1 bg-gradient-to-r from-[#FFB629] to-[#FFDA56] via-[#FFD7A6] top-0 lef-0"></span>
+        </div>
+        <h1
+          class="text-5xl leading-[120%] text-[#1C1F35] font-Rubik font-semibold mb-6">
+          Agenda
+        </h1>
+      </div>
+
+      <div class="grid sm:grid-cols-2 px-2 gap-8 lg:gap-16 mx-auto container">
+        <div
+          class="py-6 px-20 bg-[#F4F4F4] text-[#1C1F35] w-full lg:w-2/3 lg:justify-self-end">
+          <div class="pb-3 border-b-[#D6D6D6] border-b">
+            <h2
+              class="text-[30px] font-Rubik text-[#F6B426] font-semibold mb-2">
+              THURSDAY
+            </h2>
+            <h3 class="text-2xl font-Rubik font-medium mb-2">March 7</h3>
+            <p class="text-xl font-Rubik">10:00 am</p>
+            <p class="text-xl font-Rubik">Registration & Welcome</p>
+          </div>
+          <div class="py-3 border-b-[#D6D6D6] border-b">
+            <p class="text-xl font-Rubik">11:00 am</p>
+            <p class="text-xl font-Rubik">Meetings & content session</p>
+            <p class="text-xl font-Rubik">Kick off</p>
+          </div>
+          <div class="py-3 border-b-[#D6D6D6] border-b">
+            <p class="text-xl font-Rubik">18:00 pm</p>
+            <p class="text-xl font-Rubik">End of first day</p>
+          </div>
+          <div class="py-3">
+            <p class="text-xl font-Rubik">20:00 pm</p>
+            <p class="text-xl font-Rubik">Networking Party</p>
+            <p class="text-xl font-Rubik">(Eat&Drink)</p>
+          </div>
+        </div>
+        <div
+          class="py-6 px-20 bg-[#F4F4F4] text-[#1C1F35] w-full lg:w-2/3 lg:justify-self-start">
+          <div class="pb-3 border-b-[#D6D6D6] border-b">
+            <h2
+              class="text-[30px] font-Rubik text-[#F6B426] font-semibold mb-2">
+              FRIDAY
+            </h2>
+            <h3 class="text-2xl font-Rubik font-medium mb-2">March 8</h3>
+            <p class="text-xl font-Rubik">10:00 am</p>
+            <p class="text-xl font-Rubik">Breakfast & Networking</p>
+          </div>
+          <div class="py-3 border-b-[#D6D6D6] border-b">
+            <p class="text-xl font-Rubik">11:00 am</p>
+            <p class="text-xl font-Rubik">Meetings & content session</p>
+            <p class="text-xl font-Rubik">Kick off</p>
+          </div>
+          <div class="py-3">
+            <p class="text-xl font-Rubik">16:00 pm</p>
+            <p class="text-xl font-Rubik">End of second day</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="py-20 text-center">
+      <div class="mb-12">
+        <div class="py-1 relative bg-[#e8e8e873] text-start mx-auto w-fit mb-3">
+          <h2 class="text-[#1C1F35] text-sm px-3 font-Rubik">Pricing</h2>
+          <span
+            class="absolute h-full w-1 bg-gradient-to-r from-[#FFB629] to-[#FFDA56] via-[#FFD7A6] top-0 lef-0"></span>
+        </div>
+        <h1
+          class="text-5xl leading-[120%] text-[#1C1F35] font-Rubik font-semibold">
+          Our Best Pricing
+        </h1>
+      </div>
+
+      <div
+        class="container px-2 mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+        <div class="py-6 px-12 bg-[#F4F4F4] text-[#1C1F35]">
+          <h2 class="text-[30px] font-Rubik font-semibold mb-5">Basic</h2>
+          <h4 class="text-3xl font-Rubik font-semibold line-through pb-3">
+            $1900
+          </h4>
+          <h3
+            class="text-5xl text-[#FFB629] font-Rubik font-medium border-b border-b-[#D6D6D6] pb-8">
+            $1500
+          </h3>
+
+          <ul class="text-sm">
+            <li class="py-3 font-Rubik border-b border-b-[#D6D6D6]">
+              1 Access pass to the venue
+            </li>
+            <li class="py-3 font-Rubik border-b border-b-[#D6D6D6]">
+              Networking party
+            </li>
+            <li class="py-3 font-Rubik border-b border-b-[#D6D6D6]">
+              Breakfast & lunch
+            </li>
+            <li class="py-3 font-Rubik border-b border-b-[#D6D6D6]">
+              Access to all the content session
+            </li>
+          </ul>
+        </div>
+
+        <div class="py-6 px-12 text-white bg-[#091242]">
+          <h2 class="text-[30px] font-Rubik font-semibold mb-5">Gold</h2>
+          <h3
+            class="text-2xl font-Rubik font-medium border-b border-b-[#1F2A69] pb-8">
+            contact us for pricing
+          </h3>
+          <ul class="text-sm">
+            <li class="py-3 font-Rubik border-b border-b-[#1F2A69]">
+              2 Access pass to the venue
+            </li>
+            <li class="py-3 font-Rubik border-b border-b-[#1F2A69]">
+              Networking party
+            </li>
+            <li class="py-3 font-Rubik border-b border-b-[#1F2A69]">
+              1 night of hotel
+            </li>
+            <li class="py-3 font-Rubik border-b border-b-[#1F2A69]">
+              Breakfast & lunch
+            </li>
+            <li class="py-3 font-Rubik border-b border-b-[#1F2A69]">
+              6m2 Stand branded with your logo
+            </li>
+            <li class="py-3 font-Rubik border-b border-b-[#1F2A69]">
+              Unlimited 1to1 meetings
+            </li>
+            <li class="py-3 font-Rubik border-b border-b-[#1F2A69]">
+              Access to all the content session
+            </li>
+          </ul>
+        </div>
+
+        <div class="py-6 px-12 bg-[#F4F4F4] text-[#1C1F35]">
+          <h2 class="text-[30px] font-Rubik font-semibold mb-5">Premium</h2>
+          <h3
+            class="text-2xl font-Rubik font-medium border-b border-b-[#D6D6D6] pb-8">
+            contact us for pricing
+          </h3>
+          <ul class="text-sm">
+            <li class="py-3 font-Rubik border-b border-b-[#D6D6D6]">
+              3 Access pass to the venue
+            </li>
+            <li class="py-3 font-Rubik border-b border-b-[#D6D6D6]">
+              Networking party
+            </li>
+            <li class="py-3 font-Rubik border-b border-b-[#D6D6D6]">
+              2 nights of hotel
+            </li>
+            <li class="py-3 font-Rubik border-b border-b-[#D6D6D6]">
+              Breakfast & lunch
+            </li>
+            <li class="py-3 font-Rubik border-b border-b-[#D6D6D6]">
+              12m2 Stand branded with your logo
+            </li>
+            <li class="py-3 font-Rubik border-b border-b-[#D6D6D6]">
+              Unlimited 1to1 meetings
+            </li>
+            <li class="py-3 font-Rubik border-b border-b-[#D6D6D6]">
+              Access to all the content session
+            </li>
+            <li class="py-3 font-Rubik border-b border-b-[#D6D6D6]">
+              Your logo on handing signs throughout the venue
+            </li>
+            <li class="py-3 font-Rubik border-b border-b-[#D6D6D6]">
+              1 speaking session
+            </li>
+            <li class="py-3 border-b border-b-[#D6D6D6] font-Rubik">
+              1 Round of table with your pre-selected delegates (10)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-[#091242] px-2 py-20">
+      <div
+        class="container mx-auto text-white grid gap-12 sm:col-span-2 md:grid-cols-3">
+        <div class="">
+          <div class="py-1 relative bg-[#111C55] w-fit mb-5">
+            <h3 class="text-white text-sm px-3 font-Rubik">Contact Us</h3>
+            <span
+              class="absolute h-full w-1 bg-gradient-to-r from-[#FFB629] to-[#FFDA56] via-[#FFD7A6] top-0 lef-0"></span>
+          </div>
+          <h2 class="text-[35px] font-semibold mb-12">Get in touch with us</h2>
+          <div class="space-y-5">
+            <div class="flex items-center space-x-4">
+              <span
+                class="bg-[#111C55] border border-[#273270] flex items-center rounded-full justify-between">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-[#F6B426] w-[56px] h-[56px] p-4"
+                  height="1em"
+                  viewBox="0 0 512 512">
+                  <path
+                    d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                </svg>
+              </span>
+              <div class="text-white text-sm font-medium font-Krub">
+                <p>Email</p>
+                <p>info@commitevents.com</p>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+              <span
+                class="bg-[#111C55] border border-[#273270] flex items-center rounded-full justify-between">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-[#F6B426] w-[56px] h-[56px] p-4"
+                  height="1em"
+                  viewBox="0 0 448 512">
+                  <path
+                    d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z" />
+                </svg>
+              </span>
+              <div class="text-white text-sm font-medium font-Krub">
+                <p>March 7-8 , 2024</p>
+                <p>Marrakech</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sm:col-span-2">
+          <form
+            action="https://formspree.io/f/mzbloeng"
+            method="POST"
+            class="grid gap-6">
+            <div class="grid sm:grid-cols-2 gap-6">
+              <label
+                class="relative block bg-[#091242] overflow-hidden rounded-md border border-[#4E5683] px-3 pt-3 shadow-sm focus-within:border-[#1F2A69] focus-within:ring-1 focus-within:ring-[#1F2A69">
+                <input
+                  type="text"
+                  id="name"
+                  name="firstName"
+                  placeholder="First Name"
+                  class="peer h-9 py-1.5 bg-[#091242] w-full border-none text-white bg-transparent p-0 placeholder-transparent sm:text-base focus:border-transparent focus:outline-none focus:ring-0 text-sm" />
+
+                <span
+                  class="absolute font-light start-3 top-3 -translate-y-1/2 text-xs text-white transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg font-Rubik peer-focus:top-3 peer-focus:text-xs peer-focus:text-gray-300">
+                  First Name
+                </span>
+              </label>
+
+              <label
+                class="relative block bg-[#091242] overflow-hidden rounded-md border border-[#4E5683] px-3 pt-3 shadow-sm focus-within:border-[#1F2A69] focus-within:ring-1 focus-within:ring-[#1F2A69">
+                <input
+                  type="text"
+                  id="name"
+                  name="lastName"
+                  placeholder="Last Name"
+                  class="peer h-9 py-1.5 bg-[#091242] w-full border-none text-white bg-transparent p-0 placeholder-transparent sm:text-base focus:border-transparent focus:outline-none focus:ring-0 text-sm" />
+
+                <span
+                  class="absolute font-light start-3 top-3 -translate-y-1/2 text-xs text-white transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg font-Rubik peer-focus:top-3 peer-focus:text-xs peer-focus:text-gray-300">
+                  Last Name
+                </span>
+              </label>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-6">
+              <label
+                class="relative block bg-[#091242] overflow-hidden rounded-md border border-[#4E5683] px-3 pt-3 shadow-sm focus-within:border-[#1F2A69] focus-within:ring-1 focus-within:ring-[#1F2A69">
+                <input
+                  type="text"
+                  id="name"
+                  name="nameCompany"
+                  placeholder="Company Name"
+                  class="peer h-9 py-1.5 w-full bg-[#091242] border-none text-white bg-transparent p-0 placeholder-transparent sm:text-base focus:border-transparent focus:outline-none focus:ring-0 text-sm" />
+
+                <span
+                  class="absolute font-light start-3 top-3 -translate-y-1/2 text-xs text-white transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg font-Rubik peer-focus:top-3 peer-focus:text-xs peer-focus:text-gray-300">
+                  Company Name
+                </span>
+              </label>
+
+              <label
+                class="relative block bg-[#091242] overflow-hidden rounded-md border border-[#4E5683] px-3 pt-3 shadow-sm focus-within:border-[#1F2A69] focus-within:ring-1 focus-within:ring-[#1F2A69">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Company Email"
+                  class="peer h-9 py-1.5 bg-[#091242] w-full border-none text-white bg-transparent p-0 placeholder-transparent sm:text-base focus:border-transparent focus:outline-none focus:ring-0 text-sm" />
+
+                <span
+                  class="absolute font-light start-3 top-3 -translate-y-1/2 text-xs text-white transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg font-Rubik peer-focus:top-3 peer-focus:text-xs peer-focus:text-gray-300">
+                  Company Email
+                </span>
+              </label>
+            </div>
+            <div>
+              <label
+                class="relative block bg-[#091242] overflow-hidden rounded-md border border-[#4E5683] px-3 pt-3 shadow-sm focus-within:border-[#1F2A69] focus-within:ring-1 focus-within:ring-[#1F2A69">
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  class="peer h-20 py-2 w-full bg-[#091242] border-none text-white placeholder-transparent bg-transparent p-0 sm:text-base focus:border-transparent focus:outline-none focus:ring-0 text-sm"></textarea>
+                <span
+                  class="absolute start-3 top-3 -translate-y-1/2 text-xs text-white transition-all font-light peer-placeholder-shown:top-6 peer-placeholder-shown:text-lg font-Rubik peer-focus:top-3 peer-focus:text-xs peer-focus:text-gray-300">
+                  Message
+                </span>
+              </label>
+            </div>
+            <button
+              type="submit"
+              class="text-[#23212A] w-fit bg-gradient-to-r from-[#FFB629] to-[#FFDA56] font-semibold leading-[135%] px-[51px] py-5 font-Krub">
+              Submit Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-slate-400 py-2">
+      <p
+        class="text-[#1C1F35] text-center font-semibold font-Krub leading-[151%]">
+        All rights reserved
+        <span class="font-Staatliches">COMMIT EVENTS</span>
+        © 2023
+      </p>
+    </footer>
+
+    <script>
+      let isMenuOpen = false;
+
+      const menuButton = document.getElementById('menuButton');
+      const openIcon = document.getElementById('openIcon');
+      const closeIcon = document.getElementById('closeIcon');
+      const menuItems = document.getElementById('menuItems');
+
+      menuButton.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+          openIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+          menuItems.classList.remove('hidden');
+        } else {
+          openIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          menuItems.classList.add('hidden');
+        }
+      });
+    </script>
+  </body>
+</html>
