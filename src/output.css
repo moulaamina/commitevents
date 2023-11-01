@@ -805,10 +805,6 @@ video {
   list-style-type: disc;
 }
 
-.flex-row{
-  flex-direction: row;
-}
-
 .flex-col{
   flex-direction: column;
 }
