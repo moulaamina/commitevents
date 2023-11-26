@@ -108,7 +108,7 @@
 
     <section
       style="
-        background-image: url('assets/bg-Privacy.webp');
+        background-image: url('assets/retail_sponsors.webp');
         background-size: cover;
         background-position: center;
       "
@@ -261,5 +261,27 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      let isMenuOpen = false;
+
+      const menuButton = document.getElementById('menuButton');
+      const openIcon = document.getElementById('openIcon');
+      const closeIcon = document.getElementById('closeIcon');
+      const menuItems = document.getElementById('menuItems');
+
+      menuButton.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+          openIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+          menuItems.classList.remove('hidden');
+        } else {
+          openIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          menuItems.classList.add('hidden');
+        }
+      });
+    </script>
   </body>
 </html>
