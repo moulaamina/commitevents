@@ -797,6 +797,10 @@ video {
   width: 100%;
 }
 
+.w-2\/3{
+  width: 66.666667%;
+}
+
 .max-w-3xl{
   max-width: 48rem;
 }
@@ -807,6 +811,10 @@ video {
 
 .max-w-lg{
   max-width: 32rem;
+}
+
+.max-w-xl{
+  max-width: 36rem;
 }
 
 .-translate-y-1\/2{
@@ -892,6 +900,10 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
+.justify-self-end{
+  justify-self: end;
 }
 
 .overflow-hidden{
@@ -1111,11 +1123,6 @@ video {
   padding-right: 0.75rem;
 }
 
-.px-5{
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
 .px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1204,11 +1211,6 @@ video {
 .py-9{
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
-}
-
-.py-10{
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
 }
 
 .pb-12{
@@ -1308,6 +1310,11 @@ video {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-bold{
@@ -1484,8 +1491,10 @@ body {
   }
 }
 
-.box-shadow {
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+@media (min-width: 640px) {
+  .box-shadow {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
 }
 
 .focus-within\:border-\[\#1F2A69\]:focus-within{
@@ -1593,6 +1602,10 @@ body {
     justify-content: space-between;
   }
 
+  .sm\:gap-16{
+    gap: 4rem;
+  }
+
   .sm\:gap-20{
     gap: 5rem;
   }
@@ -1603,9 +1616,18 @@ body {
     margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .sm\:p-5{
+    padding: 1.25rem;
+  }
+
   .sm\:px-14{
     padding-left: 3.5rem;
     padding-right: 3.5rem;
+  }
+
+  .sm\:py-10{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
   .sm\:text-start{
@@ -1622,6 +1644,11 @@ body {
     line-height: 2.25rem;
   }
 
+  .sm\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
   .sm\:text-\[28px\]{
     font-size: 28px;
   }
@@ -1629,6 +1656,11 @@ body {
   .sm\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .sm\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .sm\:leading-\[120\%\]{
@@ -1643,6 +1675,14 @@ body {
 
   .md\:w-16{
     width: 4rem;
+  }
+
+  .md\:w-2\/3{
+    width: 66.666667%;
+  }
+
+  .md\:w-3\/4{
+    width: 75%;
   }
 
   .md\:grid-cols-2{
@@ -1661,6 +1701,10 @@ body {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
+  .md\:justify-self-end{
+    justify-self: end;
   }
 
   .md\:p-5{
@@ -1697,6 +1741,10 @@ body {
 
   .lg\:gap-16{
     gap: 4rem;
+  }
+
+  .lg\:gap-20{
+    gap: 5rem;
   }
 
   .lg\:gap-40{
