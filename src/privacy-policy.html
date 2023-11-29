@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy Policy - Commit Events</title>
+    <title>Commit Events - Privacy Policy</title>
+    <meta
+      name="description"
+      content="Privacy policy overview for Commit Events" />
+    <meta
+      name="keywords"
+      content="privacy policy, Commit Events, data protection" />
+    <meta name="author" content="Commit Events" />
     <link href="./output.css" rel="stylesheet" />
   </head>
   <body>
@@ -91,7 +98,7 @@
         <div id="menuItems" class="hidden">
           <div
             class="bg-[#111C55] container mx-auto border-[#273270] rounded-md border overflow-hidden">
-            <ul class="text-white">
+            <ul class="text-white text-lg">
               <li
                 class="xl:border-r xl:border-r-[#FFFFFF33] py-4 px-8 hover:bg-[#f6b4263a] hover:text-[#F6B426]">
                 <a
@@ -318,26 +325,6 @@
       </div>
     </footer>
 
-    <script>
-      let isMenuOpen = false;
-
-      const menuButton = document.getElementById('menuButton');
-      const openIcon = document.getElementById('openIcon');
-      const closeIcon = document.getElementById('closeIcon');
-      const menuItems = document.getElementById('menuItems');
-
-      menuButton.addEventListener('click', () => {
-        isMenuOpen = !isMenuOpen;
-        if (isMenuOpen) {
-          openIcon.classList.add('hidden');
-          closeIcon.classList.remove('hidden');
-          menuItems.classList.remove('hidden');
-        } else {
-          openIcon.classList.remove('hidden');
-          closeIcon.classList.add('hidden');
-          menuItems.classList.add('hidden');
-        }
-      });
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
