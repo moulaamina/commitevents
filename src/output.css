@@ -659,6 +659,10 @@ video {
   margin-bottom: 1.75rem;
 }
 
+.mb-8{
+  margin-bottom: 2rem;
+}
+
 .ml-1{
   margin-left: 0.25rem;
 }
@@ -673,10 +677,6 @@ video {
 
 .mt-6{
   margin-top: 1.5rem;
-}
-
-.mb-8{
-  margin-bottom: 2rem;
 }
 
 .mt-8{
@@ -837,10 +837,6 @@ video {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.flex-row{
-  flex-direction: row;
-}
-
 .flex-col{
   flex-direction: column;
 }
@@ -855,10 +851,6 @@ video {
 
 .items-center{
   align-items: center;
-}
-
-.items-baseline{
-  align-items: baseline;
 }
 
 .justify-end{
@@ -1283,10 +1275,6 @@ video {
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.pb-5{
-  padding-bottom: 1.25rem;
 }
 
 .text-center{
